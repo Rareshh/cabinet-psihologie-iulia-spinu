@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#9ca196">
+  <title>Player Privat Ghiduri Audio | Cabinet Psihologie Iulia Spinu</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/x-icon" href="images/simple-header-blended.png">
+  <style>
+    .player-private-page {
+      max-width: 900px;
+      margin: 40px auto 80px;
+      padding: 0 24px;
+    }
+    .private-welcome-card {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      margin-bottom: 36px;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+    .private-badge-active {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--color-sage-light);
+      color: var(--color-sage-deep);
+      padding: 6px 18px;
+      border-radius: var(--radius-full);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .private-badge-active svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+    .private-welcome-card h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 2.5vw + 1rem, 2.3rem);
+      color: #111;
+      margin-bottom: 14px;
+    }
+    .private-welcome-card p {
+      font-size: 1.1rem;
+      color: var(--color-text-soft);
+      line-height: 1.6;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .tip-box-bookmark {
+      background: #fafbf9;
+      border-left: 3px solid var(--color-sage);
+      padding: 16px 20px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin-top: 24px;
+      text-align: left;
+      font-size: 0.95rem;
+      color: var(--color-text-main);
+    }
+
+    /* Player Central */
+    .master-player-card {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 36px;
+    }
+    .track-selector-tabs {
+      display: flex;
+      gap: 10px;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 16px;
+      margin-bottom: 32px;
+      overflow-x: auto;
+    }
+    .track-tab-btn {
+      background: none;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: 10px 18px;
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      color: var(--color-text-soft);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .track-tab-btn:hover {
+      background-color: var(--color-sage-light);
+      border-color: var(--color-sage);
+    }
+    .track-tab-btn.active {
+      background-color: var(--color-sage-deep);
+      color: #ffffff;
+      border-color: var(--color-sage-deep);
+      font-weight: 500;
+    }
+    .current-track-info {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .current-track-label {
+      font-size: 0.9rem;
+      color: var(--color-sage-deep);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    .current-track-name {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      color: #111;
+      margin-bottom: 10px;
+    }
+    .current-track-guidance {
+      font-size: 1rem;
+      color: var(--color-text-soft);
+      max-width: 650px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* Master Player Controls */
+    .master-controls-cluster {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin: 28px 0;
+    }
+    .btn-skip-sec {
+      background: none;
+      border: 1px solid var(--color-border);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--color-text-soft);
+      transition: all 0.2s;
+    }
+    .btn-skip-sec:hover {
+      border-color: var(--color-sage-dark);
+      color: #111;
+      background-color: var(--color-sage-light);
+    }
+    .btn-master-play {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: var(--color-sage-deep);
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(50, 60, 45, 0.25);
+      transition: transform 0.2s, background-color 0.2s;
+    }
+    .btn-master-play:hover {
+      background-color: #343a30;
+      transform: scale(1.06);
+    }
+    .btn-master-play svg {
+      width: 26px;
+      height: 26px;
+      fill: #ffffff;
+    }
+    .btn-master-play .pause-icon {
+      display: none;
+    }
+    .btn-master-play.playing .play-icon {
+      display: none;
+    }
+    .btn-master-play.playing .pause-icon {
+      display: block;
+    }
+
+    .master-timeline-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .master-time-txt {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      font-variant-numeric: tabular-nums;
+      min-width: 48px;
+    }
+    .master-progress-bar-wrap {
+      flex: 1;
+      height: 8px;
+      background-color: #e2e6de;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+    }
+    .master-progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background-color: var(--color-sage-deep);
+      border-radius: 4px;
+      transition: width 0.1s linear;
+    }
+
+    .listening-recommendations {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 28px 28px;
+      margin-top: 24px;
+    }
+    .listening-recommendations h3 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: #111;
+    }
+    .listening-recommendations ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .listening-recommendations li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.96rem;
+      color: var(--color-text-soft);
+    }
+    .listening-recommendations svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--color-sage-deep);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigație -->
+  <header class="site-header" role="banner">
+    <div class="nav-container">
+      <div class="brand-wrapper">
+        <a href="index.html" class="brand-title">Cabinet Psihologie Iulia Spinu</a>
+      </div>
+      
+      <div class="nav-actions">
+        <nav aria-label="Navigare principală">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Acasa</a></li>
+            <li><a href="servicii.html" class="nav-link">Servicii & Tarife</a></li>
+            <li><a href="audio.html" class="nav-link">Ghiduri Audio</a></li>
+            <li><a href="contact.html" class="nav-link">Contact & Programări</a></li>
+          </ul>
+        </nav>
+
+        <a href="audio.html" class="btn-secondary" style="padding:7px 16px; font-size:0.95rem;">Catalog Ghiduri</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="player-private-page">
+    
+    <!-- Mesaj de Confirmare & Bun Venit -->
+    <div class="private-welcome-card reveal">
+      <span class="private-badge-active">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        Acces Complet Deblocat
+      </span>
+      <h1>Sesiunile Dumneavoastră Audio</h1>
+      <p>
+        Vă mulțumesc pentru încredere. Acesta este spațiul dumneavoastră privat de liniște. Așezați-vă confortabil, conectați căștile dacă doriți o imersiune mai profundă și lăsați-vă ghidat(ă) în ritmul propriului corp.
+      </p>
+
+      <div class="tip-box-bookmark">
+        <strong>Recomandare utilă:</strong> Pentru a avea acces rapid oricând (mai ales înainte de culcare), adăugați această pagină la <strong>Favorite (Bookmark)</strong> sau salvați-o pe ecranul principal al telefonului („Add to Home Screen”).
+      </div>
+    </div>
+
+    <!-- Master Player Privat -->
+    <div class="master-player-card reveal stagger-1">
+      
+      <!-- Selector Înregistrare -->
+      <div class="track-selector-tabs" role="tablist">
+        <button class="track-tab-btn active" data-track-id="somn" role="tab" aria-selected="true">
+          1. Somn Profund (~60 min)
+        </button>
+        <button class="track-tab-btn" data-track-id="anxietate" role="tab" aria-selected="false">
+          2. Calmare Anxietate (~60 min)
+        </button>
+        <button class="track-tab-btn" data-track-id="tensiune" role="tab" aria-selected="false">
+          3. Eliberare Tensiune (~60 min)
+        </button>
+      </div>
+
+      <!-- Detalii Piesa Curentă -->
+      <div class="current-track-info">
+        <div class="current-track-label">Înregistrare Selectată</div>
+        <h2 class="current-track-name" id="player-track-title">Relaxare Somatică & Pregătire pentru Somn Profund</h2>
+        <p class="current-track-guidance" id="player-track-desc">
+          O călătorie lentă de detensionare corporală și liniștire a fluxului de gânduri. Se recomandă ascultarea în poziție orizontală, la lumină difuză, înainte de adormire.
+        </p>
+      </div>
+
+      <!-- Bara de Progres & Timp -->
+      <div class="master-timeline-row">
+        <span class="master-time-txt" id="player-cur-time">00:00</span>
+        <div class="master-progress-bar-wrap" id="player-progress-wrap" role="progressbar">
+          <div class="master-progress-bar-fill" id="player-progress-fill"></div>
+        </div>
+        <span class="master-time-txt" id="player-total-time">58:40</span>
+      </div>
+
+      <!-- Butoane de Control -->
+      <div class="master-controls-cluster">
+        <button class="btn-skip-sec" id="btn-rewind" aria-label="Derulează înapoi 15 secunde" title="Înapoi 15 secunde">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.2 3.16-1.88 5.12-1.88 3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z"/></svg>
+        </button>
+
+        <button class="btn-master-play" id="btn-master-play" aria-label="Redă sau Pune pe Pauză">
+          <svg class="play-icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg class="pause-icon" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+
+        <button class="btn-skip-sec" id="btn-forward" aria-label="Avansează 15 secunde" title="Înainte 15 secunde">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M11.5 8c2.65 0 5.05.99 6.9 2.6L22 7v9h-9l3.62-3.62c-1.39-1.2-3.16-1.88-5.12-1.88-3.54 0-6.55 2.31-7.6 5.5l-2.37-.78C2.92 11.03 6.85 8 11.5 8z"/></svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Recomandări pentru o experiență optimă -->
+    <div class="listening-recommendations reveal stagger-2">
+      <h3>Recomandări pentru Eficiență Maximă</h3>
+      <ul>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          <span><strong>Utilizarea căștilor:</strong> Căștile ajută la izolarea zgomotelor ambientale și la perceperea fină a tonalității vocii și a frecvențelor sonore relaxante.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          <span><strong>Ascultare cu ecranul oprit:</strong> Puteți bloca ecranul telefonului; redarea va continua fără întrerupere pentru a nu vă obosi ochii înainte de somn.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          <span><strong>Fără forțare:</strong> Dacă atenția vă fuge către alte gânduri, observați acest lucru fără auto-critică și readuceți cu blândețe atenția asupra respirației și a vocii de fundal.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          <span><strong>Asistență:</strong> Dacă întâmpinați orice dificultate tehnică legată de redare, trimiteți un mesaj direct la <a href="tel:0744910235" style="color:var(--color-sage-deep); text-decoration:underline;">0744 910 235</a>.</span>
+        </li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-grid">
+
+        <!-- Coloana 1: Identitate Cabinet -->
+        <div class="footer-col footer-col-brand">
+          <h3 class="footer-brand-title">Cabinet de Psihologie Iulia Spînu</h3>
+          <p class="footer-brand-sub">Consiliere Psihologică Copii • Adolescenți • Adulți</p>
+          <p class="footer-credential">Cabinet autorizat și înregistrat la Colegiul Psihologilor din România • Bârlad</p>
+        </div>
+
+        <!-- Coloana 2: Navigare Rapidă -->
+        <div class="footer-col footer-col-links">
+          <h4 class="footer-col-heading">Navigare Rapidă</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Acasă</a></li>
+            <li><a href="servicii.html" class="footer-nav-link">Servicii & Tarife</a></li>
+            <li><a href="audio.html" class="footer-nav-link">Ghiduri Audio</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact & Programări</a></li>
+            <li><a href="https://g.page/r/CTEVs4ZDKVDIEBM/review" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Lasă o Recenzie Google</a></li>
+          </ul>
+        </div>
+
+        <!-- Coloana 3: Contact & Locație Aliniat Corect -->
+        <div class="footer-col footer-col-contact">
+          <h4 class="footer-col-heading">Contact & Locație</h4>
+          <div class="footer-contact-details">
+            <a href="tel:0744910235" class="footer-phone-highlight" aria-label="Apelează numărul 0744 910 235">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>0744 910 235</span>
+            </a>
+            <p class="footer-address">
+              Strada 1 Decembrie 1918, nr. 41<br>
+              (în clădirea Policlinicii), Bârlad
+            </p>
+            <p class="footer-hours">Luni – Vineri: 15:00 – 19:00</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; Cabinet de Psihologie Iulia Spînu. Toate drepturile rezervate.</span>
+        <span><a href="confidentialitate.html" style="color:inherit; text-decoration:underline;">Confidențialitate CPR & GDPR</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

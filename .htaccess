@@ -1,0 +1,49 @@
+# ==============================================================================
+# Cabinet de Psihologie Iulia Spînu | Configurație Securitate & Performanță
+# ==============================================================================
+
+# 1. Rutare Pagină de Eroare Personalizată
+ErrorDocument 404 /404.html
+
+# 2. Prevenire Listare Directoare (Securitate fișiere)
+Options -Indexes
+
+# 3. Blocare acces la fișiere ascunse / sistem
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# 4. Header-e de Securitate HTTP
+<IfModule mod_headers.c>
+    # Previne MIME-type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Previne Clickjacking (permite doar iframe-uri interne)
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # Referrer Policy strict
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Restricționare acces hardware inutil (cameră, microfon)
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# 5. Redirecționare Automată către HTTPS (dacă este activat mod_rewrite)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# 6. Optimizare Cache Browser (Viteză & Performanță)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+</IfModule>

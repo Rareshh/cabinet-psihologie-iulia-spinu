@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /asculta.html
+Allow: /
+
+Sitemap: https://psiholog-iulia-spinu.ro/sitemap.xml

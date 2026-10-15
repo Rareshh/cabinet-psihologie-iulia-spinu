@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#9ca196">
+  <title>Ghiduri Audio Terapeutice | Cabinet Psihologie Iulia Spinu Bârlad</title>
+  <meta name="description" content="Înregistrări audio ghidate de relaxare, calmare a anxietății și adormire profundă, create de psiholog clinician Iulia Spînu.">
+  <meta property="og:title" content="Ghiduri Audio Terapeutice - Cabinet Iulia Spînu">
+  <meta property="og:description" content="Tehnici ghidate pentru somn odihnitor, respirație și eliberarea stresului. Acces instant pe telefon sau calculator.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/x-icon" href="images/simple-header-blended.png">
+</head>
+<body>
+
+  <!-- Header Navigație -->
+  <header class="site-header" role="banner">
+    <div class="nav-container">
+      <div class="brand-wrapper">
+        <a href="index.html" class="brand-title">Cabinet Psihologie Iulia Spinu</a>
+      </div>
+      
+      <div class="nav-actions">
+        <nav aria-label="Navigare principală">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Acasa</a></li>
+            <li><a href="servicii.html" class="nav-link">Servicii & Tarife</a></li>
+            <li><a href="audio.html" class="nav-link active" aria-current="page">Ghiduri Audio</a></li>
+            <li><a href="contact.html" class="nav-link">Contact & Programări</a></li>
+          </ul>
+        </nav>
+
+        <button class="search-btn" aria-label="Caută pe site">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+          </svg>
+        </button>
+
+        <button class="mobile-menu-toggle" aria-label="Deschide meniul de navigare" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" aria-label="Meniu mobil">
+    <button class="drawer-close-btn" aria-label="Închide meniul">&times;</button>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Acasa</a></li>
+      <li><a href="servicii.html" class="nav-link">Servicii & Tarife</a></li>
+      <li><a href="audio.html" class="nav-link active" aria-current="page">Ghiduri Audio</a></li>
+      <li><a href="contact.html" class="nav-link">Contact & Programări</a></li>
+    </ul>
+  </aside>
+
+  <!-- Search Modal -->
+  <div class="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-modal-title">
+    <div class="search-dialog">
+      <button class="search-close-btn" aria-label="Închide căutarea">&times;</button>
+      <h3 id="search-modal-title">Căutare pe site</h3>
+      <div class="search-input-wrapper">
+        <input type="text" id="site-search-input" placeholder="Introduceți un cuvânt cheie (ex: somn, calmare, audio)..." autocomplete="off">
+      </div>
+      <ul class="search-results" aria-live="polite"></ul>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <div class="hero-badge-pill">
+          <span class="pill-dot"></span> Resurse Digitale de Autoreglare Emoțională
+        </div>
+        <h1 class="hero-title">Tehnici Audio Ghidate</h1>
+        <h2 class="hero-subtitle">Spațiu sonor de siguranță pentru adormire profundă, respirație și eliberarea stresului</h2>
+      </div>
+    </section>
+
+    <!-- Conținut Pagina Audio -->
+    <section class="audio-page-content">
+      <p class="audio-intro-text reveal">
+        Aceste înregistrări terapeutice au fost create pentru momentele în care simțiți nevoia de ghidaj cald și structurat în propriul cămin. Fiecare sesiune audio durează aproximativ o oră și îmbină tehnici psihologice validate de ancorare, relaxare musculară și sugestie liniștitoare. Puteți asculta o scurtă mostră gratuită înainte de deblocare.
+      </p>
+
+      <!-- Grid Înregistrări Audio Individuale -->
+      <div class="audio-grid">
+
+        <!-- Card Audio 1 -->
+        <article class="audio-card reveal stagger-1" id="audio-somn">
+          <div class="audio-card-meta">
+            <span class="audio-tag">Somn & Insomnie</span>
+            <span class="audio-duration">
+              <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+              ~60 minute
+            </span>
+          </div>
+
+          <h3 class="audio-card-title">Relaxare Somatică & Pregătire pentru Somn Profund</h3>
+          <p class="audio-card-desc">
+            Concepută special pentru persoanele care adorm greu sau se trezesc noaptea din cauza gândurilor repetitive. Te conduce treptat de la starea de alertă mentală la liniștea necesară unui somn regenerant.
+          </p>
+
+          <ul class="audio-benefits-list">
+            <li class="audio-benefit-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Scanare corporală lentă și eliberarea tensiunii acumulate în timpul zilei</span>
+            </li>
+            <li class="audio-benefit-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Ritm vocal adaptat fiziologic pentru încetinirea frecvenței cardiace</span>
+            </li>
+            <li class="audio-benefit-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Fundal sonor cald, fără stimuli acustici bruști</span>
+            </li>
+          </ul>
+
+          <!-- Player Demo -->
+          <div class="audio-player-box" data-track="somn">
+            <div class="player-header-row">
+              <span>Mostră demonstrativă gratuită</span>
+              <span class="audio-time-label">0:00 / 0:45</span>
+            </div>
+            <div class="player-controls-row">
+              <button class="audio-play-btn" aria-label="Redă mostră audio somn">
+                <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </button>
+              <div class="audio-progress-wrap" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <div class="audio-progress-bar">
+                  <div class="audio-progress-fill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="audio-card-footer">
+            <div class="audio-price-row">
+              <span class="audio-price">49 RON</span>
+              <span class="audio-price-sub">Acces nelimitat pe viață</span>
+            </div>
+            <a href="https://buy.stripe.com/test_placeholder_somn" target="_blank" rel="noopener noreferrer" class="btn-buy-audio" data-product="somn">
+              <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+              Deblochează Înregistrarea Completă (49 RON)
+            </a>
+          </div>
+        </article>
+
+        <!-- Card Audio 2 -->
+        <article class="audio-card reveal stagger-2" id="audio-anxietate">
+          <div class="audio-card-meta">
+            <span class="audio-tag">Anxietate & Liniștire</span>
+            <span class="audio-duration">
+              <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+              ~60 minute
+            </span>
+          </div>
+
+          <h3 class="audio-card-title">Respirație Ghidată & Calmare în Anxietate Acută</h3>
+          <p class="audio-card-desc">
+            Protocol sonor de reglare emoțională pentru momentele în care simțiți copleșire, neliniște difuză sau început de panică. Oferă o ancoră stabilă și reorientează atenția spre siguranța prezentului.
+          </p>
+
+          <ul class="audio-benefits-list">
+            <li class="audio-benefit-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Exerciții de ancorare senzorială în corp (tehnica 5-4-3-2-1)</span>
+            </li>
+            <li class="audio-benefit-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Respirație diafragmatică ghidată pas cu pas pentru calmarea nervului vag</span>
+            </li>
+            <li class="audio-benefit-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Instrucțiuni clare de gestionare a gândurilor catastrofice</span>
+            </li>
+          </ul>
+
+          <!-- Player Demo -->
+          <div class="audio-player-box" data-track="anxietate">
+            <div class="player-header-row">
+              <span>Mostră demonstrativă gratuită</span>
+              <span class="audio-time-label">0:00 / 0:45</span>
+            </div>
+            <div class="player-controls-row">
+              <button class="audio-play-btn" aria-label="Redă mostră audio anxietate">
+                <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </button>
+              <div class="audio-progress-wrap" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <div class="audio-progress-bar">
+                  <div class="audio-progress-fill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="audio-card-footer">
+            <div class="audio-price-row">
+              <span class="audio-price">49 RON</span>
+              <span class="audio-price-sub">Acces nelimitat pe viață</span>
+            </div>
+            <a href="https://buy.stripe.com/test_placeholder_anxietate" target="_blank" rel="noopener noreferrer" class="btn-buy-audio" data-product="anxietate">
+              <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+              Deblochează Înregistrarea Completă (49 RON)
+            </a>
+          </div>
+        </article>
+
+        <!-- Card Audio 3 -->
+        <article class="audio-card reveal stagger-3" id="audio-tensiune">
+          <div class="audio-card-meta">
+            <span class="audio-tag">Stres & Încărcare Mentală</span>
+            <span class="audio-duration">
+              <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+              ~60 minute
+            </span>
+          </div>
+
+          <h3 class="audio-card-title">Eliberarea Tensiunii Mentale & Relaxare Progresivă</h3>
+          <p class="audio-card-desc">
+            Metodă practică bazată pe relaxarea musculară Jacobson adaptată. Vă ajută să conștientizați și să eliberați micro-tensiunile stocate involuntar în umeri, ceafă, maxilar și zona pieptului.
+          </p>
+
+          <ul class="audio-benefits-list">
+            <li class="audio-benefit-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Detensionare musculară pe grupe principale pentru combaterea oboselii cronice</span>
+            </li>
+            <li class="audio-benefit-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Eliberarea presiunii psihice acumulate la finalul zilelor intense de muncă</span>
+            </li>
+            <li class="audio-benefit-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Creșterea flexibilității emoționale și a sentimentului de împământare</span>
+            </li>
+          </ul>
+
+          <!-- Player Demo -->
+          <div class="audio-player-box" data-track="tensiune">
+            <div class="player-header-row">
+              <span>Mostră demonstrativă gratuită</span>
+              <span class="audio-time-label">0:00 / 0:45</span>
+            </div>
+            <div class="player-controls-row">
+              <button class="audio-play-btn" aria-label="Redă mostră audio tensiune">
+                <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </button>
+              <div class="audio-progress-wrap" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <div class="audio-progress-bar">
+                  <div class="audio-progress-fill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="audio-card-footer">
+            <div class="audio-price-row">
+              <span class="audio-price">49 RON</span>
+              <span class="audio-price-sub">Acces nelimitat pe viață</span>
+            </div>
+            <a href="https://buy.stripe.com/test_placeholder_tensiune" target="_blank" rel="noopener noreferrer" class="btn-buy-audio" data-product="tensiune">
+              <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+              Deblochează Înregistrarea Completă (49 RON)
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Card Pachet Complet (Bundle 3 în 1) -->
+      <section class="bundle-card reveal" id="pachet-complet">
+        <span class="bundle-ribbon">Ofertă Pachet Complet</span>
+        <div class="bundle-inner">
+          <div>
+            <h3 class="bundle-title">Pachetul Complet de Calmare & Somn</h3>
+            <p class="bundle-desc">
+              Include toate cele trei înregistrări audio complete (aproximativ 3 ore de ghidaj terapeutic structurat). Beneficiați de întregul instrumentar sonor pentru orice moment: pregătirea somnului, gestionarea momentelor de agitație și descărcarea tensiunii fizice.
+            </p>
+            <ul class="audio-benefits-list">
+              <li class="audio-benefit-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Toate cele 3 sesiuni complete de 60 de minute</span>
+              </li>
+              <li class="audio-benefit-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Player privat optimizat pentru telefon și calculator (ascultare cu ecranul oprit)</span>
+              </li>
+              <li class="audio-benefit-item">
+                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Acces permanent garantat fără costuri de abonament recurent</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bundle-pricing-box">
+            <div class="bundle-old-price">147 RON</div>
+            <div class="bundle-current-price">119 RON</div>
+            <span class="bundle-saving-badge">Economisiți 28 RON</span>
+            <a href="https://buy.stripe.com/test_placeholder_bundle" target="_blank" rel="noopener noreferrer" class="btn-buy-audio" data-product="bundle" style="font-size:1.1rem; padding:15px;">
+              <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+              Cumpără Pachetul Complet (119 RON)
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Secțiune: Cum Funcționează Accesul -->
+      <section class="steps-section reveal">
+        <div class="section-intro-header">
+          <span class="section-label">Simplitate & Securitate</span>
+          <h2 class="section-heading-main">Cum funcționează accesul?</h2>
+          <p class="section-subtext">Trei pași rapizi până la prima dumneavoastră sesiune de ascultare.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h4 class="step-title">Alegeți Ghidul</h4>
+            <p class="step-desc">
+              Ascultați mostra demonstrativă gratuită de pe această pagină și alegeți tehnica dorită sau pachetul complet.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h4 class="step-title">Plată Securizată Stripe</h4>
+            <p class="step-desc">
+              Plătiți în câteva secunde prin Card Bancar, Apple Pay sau Google Pay pe pagina securizată oficială Stripe.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h4 class="step-title">Ascultare Imediată</h4>
+            <p class="step-desc">
+              Sunteți redirecționat instant pe pagina privată a playerului și primiți automat linkul de acces și pe email pentru a-l relua oricând.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Notă Legală & Termeni Produse Digitale -->
+      <div class="digital-legal-notice reveal">
+        <h4>Informații privind Conținutul Digital și Drepturile Pacientului</h4>
+        <p>
+          Înregistrările audio reprezintă materiale de psihoeducație și autoreglare emoțională și nu substituie un act medical sau un proces de psihoterapie individuală. Conform OUG nr. 34/2014 privind drepturile consumatorilor, furnizarea de conținut digital care nu este livrat pe un suport material este exceptată de la dreptul de retragere (retur de 14 zile) odată ce prestarea serviciului/accesul a început cu acordul prealabil expres al cumpărătorului. Plățile sunt procesate în condiții de maximă securitate de către Stripe Payments Europe Ltd.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Butoane Plutitoare (WhatsApp Calmat & Back to Top) -->
+  <div class="floating-actions-container" aria-label="Acțiuni rapide">
+    <a href="https://wa.me/40744910235?text=Bun%C4%83%20ziua!%20A%C8%99%20dori%20informa%C8%9Bii%20despre%20ghidurile%20audio." target="_blank" rel="noopener noreferrer" class="btn-float-whatsapp" aria-label="Trimite mesaj pe WhatsApp la 0744 910 235">
+      <svg viewBox="0 0 24 24">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41 1.56 1.56 2.41 3.63 2.41 5.83s-.85 4.27-2.41 5.83c-1.56 1.55-3.62 2.41-5.82 2.41-1.46 0-2.89-.38-4.14-1.11l-.3-.18-3.12.82.83-3.04-.2-.31c-.8-1.28-1.23-2.77-1.23-4.32 0-2.2 0.86-4.27 2.41-5.83 1.56-1.55 3.63-2.41 5.75-2.41m-2.82 4.14c-.16 0-.35.06-.53.27-.19.2-.72.7-.72 1.71 0 1.01.74 1.99.84 2.13.1.13 1.43 2.29 3.53 3.12 1.74.69 2.09.55 2.47.51.38-.03 1.22-.5 1.4-.98.17-.48.17-.89.12-.98-.05-.09-.2-.14-.42-.25-.22-.11-1.3-.64-1.5-.72-.2-.07-.35-.11-.5.11-.15.22-.58.72-.71.87-.13.15-.26.17-.48.06-.22-.11-.93-.34-1.77-1.09-.65-.58-1.09-1.3-1.22-1.52-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.21-.69-1.65-.18-.44-.37-.38-.5-.38z"/>
+      </svg>
+    </a>
+
+    <button class="btn-back-to-top" aria-label="Înapoi sus">
+      <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+    </button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-grid">
+
+        <!-- Coloana 1: Identitate Cabinet -->
+        <div class="footer-col footer-col-brand">
+          <h3 class="footer-brand-title">Cabinet de Psihologie Iulia Spînu</h3>
+          <p class="footer-brand-sub">Consiliere Psihologică Copii • Adolescenți • Adulți</p>
+          <p class="footer-credential">Cabinet autorizat și înregistrat la Colegiul Psihologilor din România • Bârlad</p>
+        </div>
+
+        <!-- Coloana 2: Navigare Rapidă -->
+        <div class="footer-col footer-col-links">
+          <h4 class="footer-col-heading">Navigare Rapidă</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Acasă</a></li>
+            <li><a href="servicii.html" class="footer-nav-link">Servicii & Tarife</a></li>
+            <li><a href="audio.html" class="footer-nav-link">Ghiduri Audio</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact & Programări</a></li>
+            <li><a href="https://g.page/r/CTEVs4ZDKVDIEBM/review" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Lasă o Recenzie Google</a></li>
+          </ul>
+        </div>
+
+        <!-- Coloana 3: Contact & Locație Aliniat Corect -->
+        <div class="footer-col footer-col-contact">
+          <h4 class="footer-col-heading">Contact & Locație</h4>
+          <div class="footer-contact-details">
+            <a href="tel:0744910235" class="footer-phone-highlight" aria-label="Apelează numărul 0744 910 235">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>0744 910 235</span>
+            </a>
+            <p class="footer-address">
+              Strada 1 Decembrie 1918, nr. 41<br>
+              (în clădirea Policlinicii), Bârlad
+            </p>
+            <p class="footer-hours">Luni – Vineri: 15:00 – 19:00</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; Cabinet de Psihologie Iulia Spînu. Toate drepturile rezervate.</span>
+        <span><a href="confidentialitate.html" style="color:inherit; text-decoration:underline;">Confidențialitate CPR & GDPR</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#9ca196">
+  <title>Cabinet Psihologie Iulia Spinu | Bârlad</title>
+  <meta name="description" content="Cabinet de Psihologie Iulia Spînu în Bârlad. Sprijin emoțional, consiliere copii, adolescenți și adulți. Un prim pas spre starea de bine.">
+  <meta property="og:title" content="Cabinet Psihologie Iulia Spinu">
+  <meta property="og:description" content="Un prim pas spre starea de bine. Sprijin emoțional pentru copii, adolescenți și părinți în Bârlad.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/x-icon" href="images/simple-header-blended.png">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" role="banner">
+    <div class="nav-container">
+      <div class="brand-wrapper">
+        <a href="index.html" class="brand-title">Cabinet Psihologie Iulia Spinu</a>
+      </div>
+      
+      <div class="nav-actions">
+        <nav aria-label="Navigare principală">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link active" aria-current="page">Acasa</a></li>
+            <li><a href="servicii.html" class="nav-link">Servicii & Tarife</a></li>
+            <li><a href="audio.html" class="nav-link">Ghiduri Audio</a></li>
+            <li><a href="contact.html" class="nav-link">Contact & Programări</a></li>
+          </ul>
+        </nav>
+
+        <button class="search-btn" aria-label="Caută pe site">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+          </svg>
+        </button>
+
+        <button class="mobile-menu-toggle" aria-label="Deschide meniul de navigare" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay" aria-hidden="true"></div>
+  <aside class="mobile-nav-drawer" aria-label="Meniu mobil">
+    <button class="drawer-close-btn" aria-label="Închide meniul">&times;</button>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link active" aria-current="page">Acasa</a></li>
+      <li><a href="servicii.html" class="nav-link">Servicii & Tarife</a></li>
+      <li><a href="audio.html" class="nav-link">Ghiduri Audio</a></li>
+      <li><a href="contact.html" class="nav-link">Contact & Programări</a></li>
+    </ul>
+  </aside>
+
+  <!-- Search Modal -->
+  <div class="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-modal-title">
+    <div class="search-dialog">
+      <button class="search-close-btn" aria-label="Închide căutarea">&times;</button>
+      <h3 id="search-modal-title">Căutare pe site</h3>
+      <div class="search-input-wrapper">
+        <input type="text" id="site-search-input" placeholder="Introduceți un cuvânt cheie (ex: copii, preț, program)..." autocomplete="off">
+      </div>
+      <ul class="search-results" aria-live="polite"></ul>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <div class="hero-badge-pill">
+          <span class="pill-dot"></span> Cabinet în Bârlad • Consultații la Cabinet & Online
+        </div>
+        <h1 class="hero-title">Cabinet de Psihologie - Iulia Spînu</h1>
+        <h2 class="hero-subtitle">Sprijin emoțional pentru copii, adolescenți și părinți în Bârlad</h2>
+      </div>
+    </section>
+
+    <!-- Intro & CTA Section -->
+    <section class="intro-cta-section">
+      <div class="reveal">
+        <p class="intro-tagline">Un prim pas spre starea de bine.</p>
+        <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap; margin-top:10px;">
+          <a href="contact.html" class="btn-primary">
+            Programează o ședință
+          </a>
+          <a href="tel:0744910235" class="btn-secondary">
+            Apel de cunoaștere gratuit
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Piloni de Încredere -->
+    <section class="trust-pillars-section">
+      <div class="pillars-grid">
+        <div class="pillar-item reveal stagger-1">
+          <div class="pillar-icon-box">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          </div>
+          <div class="pillar-text">
+            <h3>Confidențialitate Totală</h3>
+            <p>Spațiu sigur și protejat, ghidat de etică și secret profesional strict.</p>
+          </div>
+        </div>
+
+        <div class="pillar-item reveal stagger-2">
+          <div class="pillar-icon-box">
+            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+          </div>
+          <div class="pillar-text">
+            <h3>Atestat de Liberă Practică</h3>
+            <p>Membru al Colegiului Psihologilor din România, formare clinică continuă.</p>
+          </div>
+        </div>
+
+        <div class="pillar-item reveal stagger-3">
+          <div class="pillar-icon-box">
+            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <div class="pillar-text">
+            <h3>Abordare Personalizată</h3>
+            <p>Intervenții adaptate fiecărei etape de viață, ritm și nevoie emoțională.</p>
+          </div>
+        </div>
+
+        <div class="pillar-item reveal stagger-4">
+          <div class="pillar-icon-box">
+            <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.58l2.2-2.21c.28-.27.36-.66.25-1.01C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/></svg>
+          </div>
+          <div class="pillar-text">
+            <h3>Apel Gratuit de Cunoaștere</h3>
+            <p>10-15 minute pentru a discuta fără obligații cum vă pot fi de ajutor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview Cards -->
+    <section class="services-overview">
+      <div class="section-intro-header reveal">
+        <span class="section-label">Arii de Consiliere</span>
+        <h2 class="section-heading-main">Servicii Psihologice</h2>
+        <p class="section-subtext">Un cadru cald și empatic dedicat dezvoltării și echilibrului psihic.</p>
+      </div>
+
+      <div class="cards-container">
+        <!-- Card 1 -->
+        <a href="servicii.html#copii" class="service-card reveal stagger-1">
+          <div class="card-img-wrapper">
+            <span class="card-badge">50 min • 190 RON</span>
+            <img src="images/consiliere-copii.png" alt="Consiliere Psihologică Copii - Cabinet Iulia Spînu" width="365" height="323" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Consiliere Copii</h3>
+            <p class="card-description">
+              Un spațiu sigur și prietenos unde cei mici pot explora și depăși dificultățile emoționale prin joc și tehnici adaptate vârstei.
+            </p>
+            <div class="card-footer-action">
+              <span>Află detalii</span>
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="servicii.html#adolescenti" class="service-card reveal stagger-2">
+          <div class="card-img-wrapper">
+            <span class="card-badge">50 min • 190 RON</span>
+            <img src="images/consiliere-adolescenti.png" alt="Consiliere Psihologică Adolescenți - Cabinet Iulia Spînu" width="366" height="322" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Consiliere Adolescenți</h3>
+            <p class="card-description">
+              Sprijin empatic pentru tineri în perioade de tranziție, anxietate școlară, probleme de identitate sau dificultăți relaționale.
+            </p>
+            <div class="card-footer-action">
+              <span>Află detalii</span>
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="servicii.html#adulti" class="service-card reveal stagger-3">
+          <div class="card-img-wrapper">
+            <span class="card-badge">50 min • 190 RON</span>
+            <img src="images/consiliere-adulti.png" alt="Consiliere Psihologică Adulți - Cabinet Iulia Spînu" width="365" height="321" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Consiliere Adulți</h3>
+            <p class="card-description">
+              Spațiu de lucru pentru gestionarea stresului, a anxietății, a dificultăților de cuplu sau a crizelor personale, oferind claritate și echilibru.
+            </p>
+            <div class="card-footer-action">
+              <span>Află detalii</span>
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Despre Terapeut Section -->
+    <section class="about-therapist-section" id="despre">
+      <div class="about-container">
+        <div class="about-visual reveal">
+          <div class="about-image-card">
+            <img src="images/hero-bg.jpg" alt="Cabinet Psihologie Iulia Spînu Bârlad" style="height:420px; width:100%; object-fit:cover;">
+          </div>
+          <div class="about-quote-card">
+            <p>„Fiecare om are în interior resursele necesare pentru a depăși momentele dificile. Rolul meu este să vă însoțesc cu răbdare și respect.”</p>
+          </div>
+        </div>
+
+        <div class="about-content reveal stagger-2">
+          <span class="section-label">Despre Cabinet</span>
+          <h2>O abordare caldă, lipsită de prejudecăți</h2>
+          <p class="about-lead">
+            Sunt Iulia Spînu, psiholog clinician și consilier dedicat sprijinirii celor care trec prin momente de cumpănă sau doresc o mai bună cunoaștere de sine.
+          </p>
+          <p class="about-text">
+            Cabinetul meu din Bârlad a fost gândit ca un spațiu de siguranță, lumină și căldură. Aici, fiecare gând, îngrijorare sau emoție este întâmpinată cu ascultare activă și fără judecată, indiferent că este vorba despre un copil care învață să-și gestioneze emoțiile, un adolescent în căutarea propriei identități sau un adult copleșit de ritmul vieții cotidiene.
+          </p>
+          
+          <div class="about-credentials">
+            <div class="credential-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Cabinet autorizat și înregistrat la Colegiul Psihologilor din România</span>
+            </div>
+            <div class="credential-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Formare specializată în psihologie clinică și consiliere psihologică</span>
+            </div>
+            <div class="credential-item">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Ședințe desfășurate fizic la cabinet (Bârlad) sau online prin platforme securizate</span>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn-primary">Ia legătura cu mine</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secțiune Oficială Google Business & Recenzii Autentice -->
+    <section class="google-reviews-section">
+      <div class="google-reviews-container reveal">
+        <div class="section-intro-header" style="margin-bottom:30px;">
+          <span class="section-label">Transparență & Încredere</span>
+          <h2 class="section-heading-main">Recenzii pe Google</h2>
+          <p class="section-subtext">Construim o comunitate bazată pe experiențe autentice și respect reciproc.</p>
+        </div>
+
+        <div class="google-card-wrapper">
+          <div class="google-logo-badge">
+            <svg viewBox="0 0 48 48">
+              <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+              <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+              <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+              <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+            </svg>
+            <span class="badge-google-verified">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              Profil Oficial Google Business
+            </span>
+          </div>
+
+          <div class="google-stars-display" aria-label="Evaluare Google">
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          </div>
+
+          <h3 class="google-profile-title">Părerea dumneavoastră contează</h3>
+          <p class="google-profile-description">
+            Dacă ați trecut pragul cabinetului nostru sau ați beneficiat de consiliere, vă invităm să împărtășiți experiența dumneavoastră pe Google. Recenzia dumneavoastră îi poate ajuta pe alți părinți, adolescenți sau adulți să facă primul pas cu încredere.
+          </p>
+
+          <div class="google-actions-row">
+            <a href="https://g.page/r/CTEVs4ZDKVDIEBM/review" target="_blank" rel="noopener noreferrer" class="btn-google-review">
+              <svg viewBox="0 0 24 24"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+              Lasă o recenzie pe Google
+            </a>
+            <a href="https://share.google/9X2bNmHL69RgVJWZQ" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+              Vezi profilul pe Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Întrebări Frecvente (FAQ) -->
+    <section class="faq-section">
+      <div class="faq-container">
+        <div class="section-intro-header reveal">
+          <span class="section-label">Claritate & Întrebări</span>
+          <h2 class="section-heading-main">Întrebări Frecvente</h2>
+          <p class="section-subtext">Răspunsuri la cele mai comune întrebări înainte de prima ședință.</p>
+        </div>
+
+        <div class="faq-accordion reveal stagger-1">
+          <!-- Item 1 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Ce se întâmplă în cadrul primei ședințe?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+            </button>
+            <div class="faq-content">
+              <div class="faq-body">
+                Prima ședință este una de cunoaștere reciprocă și evaluare inițială. Vom discuta despre motivele pentru care ați venit, provocările cu care vă confruntați și ce obiective vă doriți să atingeți. Nu există presiune de a povesti lucruri pentru care nu vă simțiți încă pregătit(ă).
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Ce presupune apelul gratuit de cunoaștere?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+            </button>
+            <div class="faq-content">
+              <div class="faq-body">
+                Este o discuție telefonică scurtă (10-15 minute), fără niciun cost sau obligație, în care îmi puteți expune pe scurt situația dumneavoastră și puteți afla dacă tipul meu de intervenție este potrivit pentru ceea ce căutați.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Cât durează o ședință și cât de des este recomandat să venim?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+            </button>
+            <div class="faq-content">
+              <div class="faq-body">
+                Fiecare ședință are o durată standard de 50 de minute. Frecvența recomandată în faza inițială este de obicei de o ședință pe săptămână, urmând ca pe parcurs să fie stabilită de comun acord în funcție de evoluție.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Confidențialitatea informațiilor este garantată?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+            </button>
+            <div class="faq-content">
+              <div class="faq-body">
+                Categoric da. Toate informațiile împărtășite în cabinet sunt strict confidențiale, fiind protejate de Codul Deontologic al Psihologilor din România și de legislația în vigoare.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Se pot desfășura ședințe și în format online?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+            </button>
+            <div class="faq-content">
+              <div class="faq-body">
+                Da, pentru adolescenți și adulți oferim posibilitatea ședințelor online prin platforme securizate (Google Meet / Zoom), oferind aceeași eficiență și atenție terapeutică.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Butoane Plutitoare (WhatsApp Calmat & Back to Top) -->
+  <div class="floating-actions-container" aria-label="Acțiuni rapide">
+    <a href="https://wa.me/40744910235?text=Bun%C4%83%20ziua!%20A%C8%99%20dori%20informa%C8%9Bii%20despre%20o%20programare." target="_blank" rel="noopener noreferrer" class="btn-float-whatsapp" aria-label="Trimite mesaj pe WhatsApp la 0744 910 235">
+      <svg viewBox="0 0 24 24">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41 1.56 1.56 2.41 3.63 2.41 5.83s-.85 4.27-2.41 5.83c-1.56 1.55-3.62 2.41-5.82 2.41-1.46 0-2.89-.38-4.14-1.11l-.3-.18-3.12.82.83-3.04-.2-.31c-.8-1.28-1.23-2.77-1.23-4.32 0-2.2 0.86-4.27 2.41-5.83 1.56-1.55 3.63-2.41 5.75-2.41m-2.82 4.14c-.16 0-.35.06-.53.27-.19.2-.72.7-.72 1.71 0 1.01.74 1.99.84 2.13.1.13 1.43 2.29 3.53 3.12 1.74.69 2.09.55 2.47.51.38-.03 1.22-.5 1.4-.98.17-.48.17-.89.12-.98-.05-.09-.2-.14-.42-.25-.22-.11-1.3-.64-1.5-.72-.2-.07-.35-.11-.5.11-.15.22-.58.72-.71.87-.13.15-.26.17-.48.06-.22-.11-.93-.34-1.77-1.09-.65-.58-1.09-1.3-1.22-1.52-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.21-.69-1.65-.18-.44-.37-.38-.5-.38z"/>
+      </svg>
+    </a>
+
+    <button class="btn-back-to-top" aria-label="Înapoi sus">
+      <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+    </button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-grid">
+
+        <!-- Coloana 1: Identitate Cabinet -->
+        <div class="footer-col footer-col-brand">
+          <h3 class="footer-brand-title">Cabinet de Psihologie Iulia Spînu</h3>
+          <p class="footer-brand-sub">Consiliere Psihologică Copii • Adolescenți • Adulți</p>
+          <p class="footer-credential">Cabinet autorizat și înregistrat la Colegiul Psihologilor din România • Bârlad</p>
+        </div>
+
+        <!-- Coloana 2: Navigare Rapidă -->
+        <div class="footer-col footer-col-links">
+          <h4 class="footer-col-heading">Navigare Rapidă</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Acasă</a></li>
+            <li><a href="servicii.html" class="footer-nav-link">Servicii & Tarife</a></li>
+            <li><a href="audio.html" class="footer-nav-link">Ghiduri Audio</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact & Programări</a></li>
+            <li><a href="https://g.page/r/CTEVs4ZDKVDIEBM/review" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Lasă o Recenzie Google</a></li>
+          </ul>
+        </div>
+
+        <!-- Coloana 3: Contact & Locație Aliniat Corect -->
+        <div class="footer-col footer-col-contact">
+          <h4 class="footer-col-heading">Contact & Locație</h4>
+          <div class="footer-contact-details">
+            <a href="tel:0744910235" class="footer-phone-highlight" aria-label="Apelează numărul 0744 910 235">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>0744 910 235</span>
+            </a>
+            <p class="footer-address">
+              Strada 1 Decembrie 1918, nr. 41<br>
+              (în clădirea Policlinicii), Bârlad
+            </p>
+            <p class="footer-hours">Luni – Vineri: 15:00 – 19:00</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>&copy; Cabinet de Psihologie Iulia Spînu. Toate drepturile rezervate.</span>
+        <span><a href="confidentialitate.html" style="color:inherit; text-decoration:underline;">Confidențialitate CPR & GDPR</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
