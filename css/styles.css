@@ -1642,7 +1642,7 @@ textarea.form-control {
   height: 100%;
   background-color: #ffffff;
   box-shadow: -6px 0 26px rgba(0, 0, 0, 0.16);
-  z-index: 500;
+  z-index: 1100;
   transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
@@ -1661,7 +1661,7 @@ textarea.form-control {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(2px);
-  z-index: 490;
+  z-index: 1090;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.35s ease, visibility 0.35s ease;
@@ -1673,13 +1673,32 @@ textarea.form-control {
 }
 
 .mobile-nav-drawer .nav-links {
+  display: flex !important;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .mobile-nav-drawer .nav-link {
+  font-family: var(--font-heading);
   font-size: 1.35rem;
-  min-height: 50px;
+  font-weight: 500;
+  color: #222222;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.mobile-nav-drawer .nav-link:hover {
+  color: var(--color-sage-deep);
+}
+
+.mobile-nav-drawer .nav-link.active {
+  color: var(--color-sage-deep);
+  font-weight: 600;
 }
 
 .drawer-close-btn {
@@ -1728,7 +1747,7 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
-  .nav-links {
+  .site-header .nav-links {
     display: none;
   }
   .mobile-menu-toggle {

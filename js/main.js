@@ -83,6 +83,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
   if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
 
+  const drawerLinks = document.querySelectorAll('.mobile-nav-drawer .nav-link');
+  drawerLinks.forEach(link => {
+    link.addEventListener('click', closeDrawer);
+  });
+
   // --- 4. Modul Căutare pe Site ---
   const searchBtn = document.querySelector('.search-btn');
   const searchModal = document.querySelector('.search-modal');
