@@ -10,12 +10,20 @@ Options -Indexes
 
 # 3. Blocare acces la fișiere ascunse / sistem
 <FilesMatch "^\.">
-    Order allow,deny
-    Deny from all
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
 </FilesMatch>
 
 # 4. Header-e de Securitate HTTP
 <IfModule mod_headers.c>
+    # HTTP Strict Transport Security (HSTS)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
     # Previne MIME-type sniffing
     Header always set X-Content-Type-Options "nosniff"
     

@@ -260,6 +260,8 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.faq-item').forEach(other => {
         if (other !== item) {
           other.classList.remove('open');
+          const otherTrigger = other.querySelector('.faq-trigger');
+          if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
           const otherContent = other.querySelector('.faq-content');
           if (otherContent) otherContent.style.maxHeight = null;
         }
@@ -267,17 +269,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (isOpen) {
         item.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
         content.style.maxHeight = null;
       } else {
         item.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
         content.style.maxHeight = content.scrollHeight + 'px';
       }
     });
   });
-
-
-
-
 
   // --- 8. Player Audio Demo (Mostre Gratuite pe audio.html) ---
   const audioBoxes = document.querySelectorAll('.audio-player-box');
@@ -287,46 +287,70 @@ document.addEventListener('DOMContentLoaded', () => {
   const PREVIEW_DURATION = 45; // 45 secunde
   let audioCtx = null;
   let synthGain = null;
+  let activeOsc1 = null;
+  let activeOsc2 = null;
+  let activeFilter = null;
 
   function stopAmbientSound() {
     if (synthGain && audioCtx) {
       try {
-        synthGain.gain.setTargetAtTime(0, audioCtx.currentTime, 0.1);
+        synthGain.gain.setTargetAtTime(0, audioCtx.currentTime, 0.05);
       } catch (err) {}
+    }
+    if (activeOsc1) {
+      try {
+        activeOsc1.stop();
+        activeOsc1.disconnect();
+      } catch (err) {}
+      activeOsc1 = null;
+    }
+    if (activeOsc2) {
+      try {
+        activeOsc2.stop();
+        activeOsc2.disconnect();
+      } catch (err) {}
+      activeOsc2 = null;
+    }
+    if (activeFilter) {
+      try {
+        activeFilter.disconnect();
+      } catch (err) {}
+      activeFilter = null;
     }
   }
 
   function startAmbientSound() {
     try {
+      stopAmbientSound();
       const AudioContextClass = window.AudioContext || window.webkitAudioContext;
       if (!AudioContextClass) return;
       if (!audioCtx) audioCtx = new AudioContextClass();
       if (audioCtx.state === 'suspended') audioCtx.resume();
 
       // Sintetizator calmat ambiental la 432Hz (acord terapeutic profund)
-      const osc1 = audioCtx.createOscillator();
-      const osc2 = audioCtx.createOscillator();
+      activeOsc1 = audioCtx.createOscillator();
+      activeOsc2 = audioCtx.createOscillator();
       synthGain = audioCtx.createGain();
-      const filter = audioCtx.createBiquadFilter();
+      activeFilter = audioCtx.createBiquadFilter();
 
-      filter.type = 'lowpass';
-      filter.frequency.value = 350;
+      activeFilter.type = 'lowpass';
+      activeFilter.frequency.value = 350;
 
-      osc1.type = 'sine';
-      osc1.frequency.setValueAtTime(216, audioCtx.currentTime); // A3 (432Hz octave)
-      osc2.type = 'sine';
-      osc2.frequency.setValueAtTime(324, audioCtx.currentTime); // E4 harmonic
+      activeOsc1.type = 'sine';
+      activeOsc1.frequency.setValueAtTime(216, audioCtx.currentTime); // A3 (432Hz octave)
+      activeOsc2.type = 'sine';
+      activeOsc2.frequency.setValueAtTime(324, audioCtx.currentTime); // E4 harmonic
 
       synthGain.gain.setValueAtTime(0.001, audioCtx.currentTime);
       synthGain.gain.exponentialRampToValueAtTime(0.035, audioCtx.currentTime + 1.2);
 
-      osc1.connect(filter);
-      osc2.connect(filter);
-      filter.connect(synthGain);
+      activeOsc1.connect(activeFilter);
+      activeOsc2.connect(activeFilter);
+      activeFilter.connect(synthGain);
       synthGain.connect(audioCtx.destination);
 
-      osc1.start();
-      osc2.start();
+      activeOsc1.start();
+      activeOsc2.start();
     } catch (e) {}
   }
 
