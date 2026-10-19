@@ -86,15 +86,19 @@
     <section class="contact-page-content">
       <div class="contact-layout-grid">
 
-        <!-- Coloana Stânga: Detalii Cabinet, Status & Program -->
+        <!-- Coloana Stânga: Contact Direct & Mesagerie -->
         <div class="contact-info-card reveal stagger-1">
           <!-- Status Pill Actualizat în Timp Real -->
           <div class="live-status-pill closed">
             <span class="pulse-indicator"></span> Se calculează starea cabinetului...
           </div>
 
-          <p class="contact-callout-text">
-            Pentru programări rapide sau pentru apelul gratuit de cunoaștere (10-15 minute), mă puteți suna direct:
+          <h2 style="font-family:var(--font-heading); font-size:1.6rem; color:#111; margin-bottom:12px; font-weight:500;">
+            Contact Direct
+          </h2>
+
+          <p class="contact-callout-text" style="font-size:1.15rem; margin-bottom:18px;">
+            Pentru programări sau pentru apelul gratuit de cunoaștere (10-15 minute), vă invit să mă contactați direct prin telefon sau mesaj pe WhatsApp:
           </p>
 
           <a href="tel:0744910235" class="phone-big-link" aria-label="Apelează numărul 0744 910 235">
@@ -102,9 +106,38 @@
             0744 910 235
           </a>
 
+          <!-- Butoane Rapide de Contact -->
+          <div class="quick-contact-actions" style="margin-bottom:24px;">
+            <a href="https://wa.me/40744910235?text=Bun%C4%83%20ziua!%20A%C8%99%20dori%20o%20programare%20la%20cabinetul%20de%20psihologie." target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="flex:1; justify-content:center;">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41 1.56 1.56 2.41 3.63 2.41 5.83s-.85 4.27-2.41 5.83c-1.56 1.55-3.62 2.41-5.82 2.41-1.46 0-2.89-.38-4.14-1.11l-.3-.18-3.12.82.83-3.04-.2-.31c-.8-1.28-1.23-2.77-1.23-4.32 0-2.2 0.86-4.27 2.41-5.83 1.56-1.55 3.63-2.41 5.75-2.41m-2.82 4.14c-.16 0-.35.06-.53.27-.19.2-.72.7-.72 1.71 0 1.01.74 1.99.84 2.13.1.13 1.43 2.29 3.53 3.12 1.74.69 2.09.55 2.47.51.38-.03 1.22-.5 1.4-.98.17-.48.17-.89.12-.98-.05-.09-.2-.14-.42-.25-.22-.11-1.3-.64-1.5-.72-.2-.07-.35-.11-.5.11-.15.22-.58.72-.71.87-.13.15-.26.17-.48.06-.22-.11-.93-.34-1.77-1.09-.65-.58-1.09-1.3-1.22-1.52-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.21-.69-1.65-.18-.44-.37-.38-.5-.38z"/></svg>
+              Mesaj WhatsApp
+            </a>
+            <a href="tel:0744910235" class="btn-secondary" style="flex:1; justify-content:center;">
+              Apelează Direct
+            </a>
+          </div>
+
+          <!-- Notă discretă pentru confidențialitate și apeluri -->
+          <div style="background:rgba(255,255,255,0.7); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:16px 18px; font-size:0.95rem; color:var(--color-text-soft); line-height:1.55;">
+            <p style="margin:0;">
+              <strong>Notă privind confidențialitatea și ședințele:</strong> În timpul consultațiilor, telefonul rămâne pe modul silențios pentru a asigura atenția deplină acordată persoanei din cabinet. Dacă nu pot prelua apelul pe moment, vă rog să lăsați un mesaj pe WhatsApp sau prin SMS, iar eu vă voi contacta în cel mai scurt timp posibil.
+            </p>
+          </div>
+        </div>
+
+        <!-- Coloana Dreapta: Program & Locație Cabinet -->
+        <div class="contact-info-card reveal stagger-2">
+          <h2 style="font-family:var(--font-heading); font-size:1.6rem; color:#111; margin-bottom:12px; font-weight:500;">
+            Program & Locație
+          </h2>
+
+          <p style="font-size:1.05rem; color:var(--color-text-soft); margin-bottom:20px; line-height:1.55;">
+            Ședințele de consiliere psihologică se desfășoară exclusiv pe bază de programare prealabilă, la cabinetul din Policlinica Bârlad sau online.
+          </p>
+
           <!-- Program de Lucru -->
-          <div class="schedule-list-detailed" id="program">
-            <h3 style="font-family:var(--font-heading); font-size:1.2rem; margin-bottom:12px; color:#111;">Program Cabinet</h3>
+          <div class="schedule-list-detailed" id="program" style="border-top:none; padding-top:0; margin-bottom:24px;">
+            <h3 style="font-family:var(--font-heading); font-size:1.15rem; margin-bottom:12px; color:#111;">Orar Consultații</h3>
             
             <div class="schedule-row">
               <span>Luni – Vineri:</span>
@@ -122,65 +155,27 @@
             </div>
           </div>
 
-          <!-- Butoane Rapide de Contact -->
-          <div class="quick-contact-actions">
-            <a href="https://wa.me/40744910235?text=Bun%C4%83%20ziua!%20A%C8%99%20dori%20o%20programare%20la%20cabinetul%20de%20psihologie." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
-              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41 1.56 1.56 2.41 3.63 2.41 5.83s-.85 4.27-2.41 5.83c-1.56 1.55-3.62 2.41-5.82 2.41-1.46 0-2.89-.38-4.14-1.11l-.3-.18-3.12.82.83-3.04-.2-.31c-.8-1.28-1.23-2.77-1.23-4.32 0-2.2 0.86-4.27 2.41-5.83 1.56-1.55 3.63-2.41 5.75-2.41m-2.82 4.14c-.16 0-.35.06-.53.27-.19.2-.72.7-.72 1.71 0 1.01.74 1.99.84 2.13.1.13 1.43 2.29 3.53 3.12 1.74.69 2.09.55 2.47.51.38-.03 1.22-.5 1.4-.98.17-.48.17-.89.12-.98-.05-.09-.2-.14-.42-.25-.22-.11-1.3-.64-1.5-.72-.2-.07-.35-.11-.5.11-.15.22-.58.72-.71.87-.13.15-.26.17-.48.06-.22-.11-.93-.34-1.77-1.09-.65-.58-1.09-1.3-1.22-1.52-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.21-.69-1.65-.18-.44-.37-.38-.5-.38z"/></svg>
-              Mesaj WhatsApp
-            </a>
-            <a href="tel:0744910235" class="btn-secondary">
-              Apelează Direct
-            </a>
-          </div>
-        </div>
-
-        <!-- Coloana Dreapta: Formular Solicitare Programare -->
-        <div class="booking-form-card reveal stagger-2">
-          <div class="form-header">
-            <h3>Solicită o Programare</h3>
-            <p>Completați formularul de mai jos și vă voi contacta în cel mai scurt timp pentru confirmare.</p>
-          </div>
-
-          <div class="form-feedback" role="alert"></div>
-
-          <form id="appointment-form" novalidate>
-            <!-- Câmp Honeypot Antispam (invizibil pentru utilizatori, capcană pentru boți) -->
-            <div style="position:absolute; left:-9999px; top:-9999px; opacity:0;" aria-hidden="true">
-              <input type="text" id="client-website-trap" name="website_url" tabindex="-1" autocomplete="off">
-            </div>
-
-            <div class="form-group">
-              <label for="client-name" class="form-label">Nume și Prenume *</label>
-              <input type="text" id="client-name" class="form-control" placeholder="ex: Maria Popescu" maxlength="80" required>
-            </div>
-
-            <div class="form-group">
-              <label for="client-phone" class="form-label">Număr de Telefon *</label>
-              <input type="tel" id="client-phone" class="form-control" placeholder="ex: 0744 xxx xxx" maxlength="20" required>
-            </div>
-
-            <div class="form-group">
-              <label for="client-service" class="form-label">Serviciul Solicitat</label>
-              <select id="client-service" class="form-control">
-                <option value="Consiliere Copii">Consiliere Copii (50 min - 190 RON)</option>
-                <option value="Consiliere Adolescenți">Consiliere Adolescenți (50 min - 190 RON)</option>
-                <option value="Consiliere Adulți">Consiliere Adulți (50 min - 190 RON)</option>
-                <option value="Apel Gratuit de Cunoaștere">Apel Gratuit de Cunoaștere (15 min)</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="client-message" class="form-label">Mesaj sau interval orar preferat (opțional)</label>
-              <textarea id="client-message" class="form-control" placeholder="Precizați dacă aveți o preferință de zi/oră sau o scurtă descriere a motivului..." maxlength="600"></textarea>
-            </div>
-
-            <button type="submit" class="btn-primary" style="width:100%;">
-              Trimite Solicitarea de Programare
-            </button>
-            <p style="font-size:0.92rem; color:var(--color-text-muted); margin-top:12px; text-align:center;">
-              Datele dumneavoastră sunt strict confidențiale și utilizate exclusiv pentru contact.
+          <!-- Adresă și repere -->
+          <div style="border-top:1px solid var(--color-border); padding-top:20px; margin-bottom:24px;">
+            <h3 style="font-family:var(--font-heading); font-size:1.15rem; margin-bottom:8px; color:#111;">Adresa Cabinetului</h3>
+            <p style="font-size:1rem; color:var(--color-text-soft); margin:0 0 4px;">
+              Strada 1 Decembrie 1918 nr. 41
             </p>
-          </form>
+            <p style="font-size:0.95rem; color:var(--color-text-muted); margin:0;">
+              Clădirea Policlinicii, Etajul 2 • Bârlad, Jud. Vaslui
+            </p>
+          </div>
+
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="https://maps.google.com/?q=46.227387,27.665468" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="flex:1; justify-content:center; font-size:0.95rem; padding:10px 16px;">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="margin-right:6px;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Navigație Hartă
+            </a>
+            <a href="https://g.page/r/CTEVs4ZDKVDIEBM/review" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="flex:1; justify-content:center; font-size:0.95rem; padding:10px 16px;">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="margin-right:6px;"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+              Lasă o recenzie
+            </a>
+          </div>
         </div>
 
       </div>

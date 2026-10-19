@@ -1,6 +1,6 @@
 // ==========================================================================
 // Cabinet de Psihologie - Iulia Spînu | Script Principal Interactiv
-// Micro-interacțiuni, animații calme de derulare, FAQ, Formular & Status
+// Micro-interacțiuni, animații calme de derulare, FAQ & Status Cabinet
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -310,62 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCabinetStatus();
   }
 
-  // --- 7. Formular Interactiv de Programare cu Opțiune WhatsApp ---
-  const bookingForm = document.querySelector('#appointment-form');
-  if (bookingForm) {
-    bookingForm.addEventListener('submit', (e) => {
-      e.preventDefault();
 
-      // Verificare Honeypot Antispam
-      const trap = document.querySelector('#client-website-trap')?.value;
-      if (trap) {
-        // Tratat silențios ca bot spam
-        return;
-      }
-
-      const name = document.querySelector('#client-name')?.value.trim() || '';
-      const phone = document.querySelector('#client-phone')?.value.trim() || '';
-      const service = document.querySelector('#client-service')?.value || '';
-      const message = document.querySelector('#client-message')?.value.trim() || '';
-      const feedback = document.querySelector('.form-feedback');
-
-      if (!name || !phone) {
-        alert("Vă rugăm să completați numele și numărul de telefon.");
-        return;
-      }
-
-      // Validare simplă număr de telefon (minim 9 cifre)
-      const cleanPhoneDigits = phone.replace(/[\s\-\(\)\.]/g, '');
-      if (!/^\+?[0-9]{9,15}$/.test(cleanPhoneDigits)) {
-        alert("Vă rugăm să introduceți un număr de telefon valid (ex: 0744 910 235).");
-        return;
-      }
-
-      // Pregătește mesajul pentru WhatsApp
-      const waText = encodeURIComponent(
-        `Bună ziua! Numele meu este ${name}.\n` +
-        `Aș dori o programare pentru: ${service}.\n` +
-        `Număr de telefon: ${phone}.\n` +
-        (message ? `Detalii suplimentare: ${message}` : '')
-      );
-
-      const waUrl = `https://wa.me/40744910235?text=${waText}`;
-
-      if (feedback) {
-        feedback.className = "form-feedback success";
-        feedback.innerHTML = `
-          <strong>Vă mulțumim, ${escapeHTML(name)}!</strong><br>
-          Solicitarea dumneavoastră a fost înregistrată. Pentru un răspuns instant, puteți trimite mesajul direct pe WhatsApp:
-          <br><br>
-          <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn-whatsapp" style="display:inline-flex; padding:8px 18px; font-size:0.95rem;">
-            Trimite mesajul acum pe WhatsApp
-          </a>
-        `;
-      }
-
-      bookingForm.reset();
-    });
-  }
 
   // --- 8. Player Audio Demo (Mostre Gratuite pe audio.html) ---
   const audioBoxes = document.querySelectorAll('.audio-player-box');
