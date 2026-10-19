@@ -1,6 +1,6 @@
 // ==========================================================================
 // Cabinet de Psihologie - Iulia Spînu | Script Principal Interactiv
-// Micro-interacțiuni, animații calme de derulare, FAQ & Status Cabinet
+// Micro-interacțiuni, animații calme de derulare & FAQ
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -270,45 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- 6. Indicator Live: Stare Cabinet (Deschis / Închis) ---
-  const statusPill = document.querySelector('.live-status-pill');
-  if (statusPill) {
-    function updateCabinetStatus() {
-      const now = new Date();
-      const day = now.getDay(); // 0: Duminica, 1: Luni, ..., 6: Sambata
-      const hour = now.getHours();
-      const minute = now.getMinutes();
-      const timeInDec = hour + minute / 60;
 
-      let isOpen = false;
-      let nextMsg = "";
-
-      if (day >= 1 && day <= 5) {
-        // Luni - Vineri: 15:00 - 19:00
-        if (timeInDec >= 15 && timeInDec < 19) {
-          isOpen = true;
-        } else if (timeInDec < 15) {
-          nextMsg = "Deschide astăzi la 15:00";
-        } else if (day === 5) {
-          nextMsg = "Închis acum • Deschide Luni la 15:00";
-        } else {
-          nextMsg = "Închis acum • Deschide mâine la 15:00";
-        }
-      } else {
-        // Sâmbătă și Duminică: Închis
-        nextMsg = "Închis în weekend • Deschide Luni la 15:00";
-      }
-
-      if (isOpen) {
-        statusPill.className = "live-status-pill open";
-        statusPill.innerHTML = '<span class="pulse-indicator"></span> Deschis acum (Program în curs)';
-      } else {
-        statusPill.className = "live-status-pill closed";
-        statusPill.innerHTML = '<span class="pulse-indicator"></span> ' + (nextMsg || "Închis în acest moment");
-      }
-    }
-    updateCabinetStatus();
-  }
 
 
 

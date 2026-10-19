@@ -1056,36 +1056,6 @@ a {
   box-shadow: var(--shadow-sm);
 }
 
-.live-status-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 16px;
-  border-radius: var(--radius-full);
-  font-size: 0.92rem;
-  font-family: var(--font-body);
-  font-weight: 700;
-  margin-bottom: 24px;
-}
-
-.live-status-pill.open {
-  background-color: #f5f0e8;
-  color: var(--color-sage-deep);
-  border: 1px solid #dfd3c3;
-}
-
-.live-status-pill.closed {
-  background-color: #f7ede8;
-  color: #8c4a38;
-  border: 1px solid #ebd2c8;
-}
-
-.live-status-pill .pulse-indicator {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: currentColor;
-}
 
 .contact-callout-text {
   font-family: var(--font-heading);
