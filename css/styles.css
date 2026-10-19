@@ -9,33 +9,40 @@
   --font-heading: 'Lora', Georgia, serif;
   --font-body: 'Gentium Basic', Georgia, serif;
   
-  /* Paletă Cromatică Calmantă (Sage, Creme, Warm Charcoal) */
-  --color-sage: #9ca196;
-  --color-sage-light: #f2f4f1;
-  --color-sage-muted: #d5d9d2;
-  --color-sage-dark: #6f7568;
-  --color-sage-deep: #4c5246;
+  /* Paletă Cromatică Calmantă (Bej Cald, Nisip, Fildeș, Warm Espresso) */
+  --color-sage: #cbbba8;         /* Culoare principală: bej cald / warm sand */
+  --color-sage-light: #f7f4ef;   /* Bej foarte deschis / linen cream */
+  --color-sage-muted: #e5ded5;   /* Bej temperat / soft neutral beige */
+  --color-sage-dark: #8f7d6b;    /* Bej închis / warm taupe pentru hover și accente */
+  --color-sage-deep: #54463a;    /* Espresso cald / deep earth taupe */
+  
+  /* Alias-uri explicite pentru bej */
+  --color-beige: #cbbba8;
+  --color-beige-light: #f7f4ef;
+  --color-beige-muted: #e5ded5;
+  --color-beige-dark: #8f7d6b;
+  --color-beige-deep: #54463a;
   
   /* Culoare WhatsApp Calmată (Verde Pădure / Eucalipt Stins, Nuanță Ne-Stridentă) */
   --color-whatsapp: #526655;
   --color-whatsapp-hover: #3e4f41;
   
   --color-bg-white: #ffffff;
-  --color-bg-cream: #faf9f6;
+  --color-bg-cream: #faf7f2;     /* Fundal cremă bej cald */
   --color-bg-card: #ffffff;
   
-  --color-text-main: #212420;
-  --color-text-soft: #4a4f47;
-  --color-text-muted: #70756d;
+  --color-text-main: #2b2622;    /* Text principal cald, nuanță espresso */
+  --color-text-soft: #534b44;
+  --color-text-muted: #7e7369;
   
-  --color-border: #e3e6e0;
-  --color-border-hover: #bfc4ba;
+  --color-border: #e8e2d8;
+  --color-border-hover: #c9bea9;
   
-  /* Umbre Delicate */
-  --shadow-sm: 0 2px 8px rgba(35, 40, 30, 0.04);
-  --shadow-md: 0 8px 24px rgba(35, 40, 30, 0.06);
-  --shadow-lg: 0 16px 36px rgba(35, 40, 30, 0.08);
-  --shadow-hover: 0 12px 28px rgba(80, 85, 75, 0.12);
+  /* Umbre Delicate Calde */
+  --shadow-sm: 0 2px 8px rgba(45, 38, 30, 0.04);
+  --shadow-md: 0 8px 24px rgba(45, 38, 30, 0.06);
+  --shadow-lg: 0 16px 36px rgba(45, 38, 30, 0.08);
+  --shadow-hover: 0 12px 28px rgba(85, 75, 65, 0.12);
   
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -270,8 +277,8 @@ a {
   bottom: 0;
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.52) 0%,
-    rgba(255, 255, 255, 0.65) 100%
+    rgba(253, 251, 247, 0.55) 0%,
+    rgba(250, 247, 242, 0.68) 100%
   );
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
@@ -286,19 +293,7 @@ a {
 }
 
 .hero-badge-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(156, 161, 150, 0.35);
-  padding: 6px 18px;
-  border-radius: var(--radius-full);
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  color: var(--color-sage-deep);
-  margin-bottom: 22px;
-  box-shadow: var(--shadow-sm);
+  display: none !important;
 }
 
 .hero-badge-pill .pill-dot {
@@ -324,7 +319,7 @@ a {
   font-family: var(--font-heading);
   font-size: clamp(1.2rem, 1.8vw + 0.6rem, 1.6rem);
   font-weight: 400;
-  color: #2d302c;
+  color: #3b342e;
   line-height: 1.4;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
   max-width: 780px;
@@ -354,7 +349,7 @@ a {
   font-family: var(--font-heading);
   font-style: italic;
   font-size: clamp(1.2rem, 1.3vw + 0.8rem, 1.45rem);
-  color: #282a26;
+  color: #332b24;
   margin-bottom: 28px;
   position: relative;
   display: inline-block;
@@ -616,7 +611,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid #f0f2ee;
+  border-top: 1px solid #f2eee8;
   padding-top: 16px;
   color: var(--color-sage-deep);
   font-family: var(--font-heading);
@@ -930,7 +925,7 @@ a {
   font-size: 1.12rem;
   line-height: 1.7;
   color: var(--color-text-soft);
-  border-top: 1px solid #f4f5f2;
+  border-top: 1px solid #f4f0ea;
 }
 
 /* ==================== SERVICES DETAILED PAGE ==================== */
@@ -1074,9 +1069,9 @@ a {
 }
 
 .live-status-pill.open {
-  background-color: #ebf2ec;
+  background-color: #f5f0e8;
   color: var(--color-sage-deep);
-  border: 1px solid #c8d6cb;
+  border: 1px solid #dfd3c3;
 }
 
 .live-status-pill.closed {
@@ -1252,9 +1247,9 @@ textarea.form-control {
 
 .form-feedback.success {
   display: block;
-  background-color: #eff5f0;
+  background-color: #f7f3ec;
   color: var(--color-sage-deep);
-  border: 1px solid #cddccf;
+  border: 1px solid #dfd3c3;
 }
 
 /* Harta */
@@ -1361,14 +1356,14 @@ textarea.form-control {
   font-family: var(--font-heading);
   font-style: italic;
   font-size: 1.05rem;
-  color: #242822;
+  color: #3d352e;
   margin-bottom: 12px;
   line-height: 1.45;
 }
 
 .footer-credential {
   font-size: 0.92rem;
-  color: #383e34;
+  color: #4d433b;
   line-height: 1.5;
 }
 
@@ -1392,7 +1387,7 @@ textarea.form-control {
 .footer-nav-link {
   font-family: var(--font-body);
   font-size: 1.05rem;
-  color: #1a1d17;
+  color: #2e2722;
   text-decoration: none;
   display: inline-block;
   transition: color var(--transition-smooth), transform var(--transition-smooth);
@@ -1443,13 +1438,13 @@ textarea.form-control {
 
 .footer-address {
   font-size: 1.02rem;
-  color: #242822;
+  color: #3d352e;
   line-height: 1.55;
 }
 
 .footer-hours {
   font-size: 0.94rem;
-  color: #383e34;
+  color: #4d433b;
   font-style: italic;
 }
 
@@ -2002,7 +1997,7 @@ textarea.form-control {
 
 /* Player Audio Demo / Preview */
 .audio-player-box {
-  background-color: #f7f9f6;
+  background-color: #faf7f2;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: 16px;
@@ -2071,7 +2066,7 @@ textarea.form-control {
 
 .audio-progress-bar {
   height: 6px;
-  background-color: #dde1d9;
+  background-color: #e6dfd5;
   border-radius: 3px;
   overflow: hidden;
   position: relative;
@@ -2096,7 +2091,7 @@ textarea.form-control {
 
 /* Preț & Buton Achiziție */
 .audio-card-footer {
-  border-top: 1px solid #f0f2ee;
+  border-top: 1px solid #f2eee8;
   padding-top: 20px;
 }
 
@@ -2139,7 +2134,7 @@ textarea.form-control {
 }
 
 .btn-buy-audio:hover {
-  background-color: #343a30;
+  background-color: #453a30;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
   color: #ffffff;
@@ -2153,7 +2148,7 @@ textarea.form-control {
 
 /* Card Special Pachet Complet (Bundle 3 în 1) */
 .bundle-card {
-  background: linear-gradient(135deg, #fbfcfb 0%, #edf1eb 100%);
+  background: linear-gradient(135deg, #fdfbf7 0%, #f3eee6 100%);
   border: 2px solid var(--color-sage);
   border-radius: var(--radius-lg);
   padding: 44px 36px;
@@ -2210,7 +2205,7 @@ textarea.form-control {
 
 .bundle-old-price {
   text-decoration: line-through;
-  color: #8c9288;
+  color: #8c8278;
   font-size: 1.18rem;
   margin-bottom: 4px;
 }
@@ -2226,7 +2221,7 @@ textarea.form-control {
 
 .bundle-saving-badge {
   display: inline-block;
-  background-color: #e4ebe2;
+  background-color: #efe9df;
   color: var(--color-sage-deep);
   padding: 3px 12px;
   border-radius: var(--radius-full);
@@ -2289,7 +2284,7 @@ textarea.form-control {
 
 /* Notă Legală & Produse Digitale */
 .digital-legal-notice {
-  background-color: #faf9f6;
+  background-color: #faf7f2;
   border: 1px dashed var(--color-border);
   border-radius: var(--radius-md);
   padding: 24px 28px;

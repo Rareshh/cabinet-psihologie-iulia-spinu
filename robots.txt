@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /asculta.html
+Disallow: /audio.html
 Allow: /
 
-Sitemap: https://psiholog-iulia-spinu.ro/sitemap.xml
+Sitemap: https://psiholog-iuliaspinu.ro/sitemap.xml

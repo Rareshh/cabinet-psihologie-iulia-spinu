@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: "Program Cabinet",
       url: "contact.html#program",
-      snippet: "Luni – Vineri: 15:00 – 19:00, Sâmbătă: 11:00 - 16:00, Duminică: Închis."
+      snippet: "Luni – Vineri: 15:00 – 19:00, Sâmbătă: Închis, Duminică: Închis."
     },
     {
       title: "Locația Cabinetului",
@@ -136,6 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
       url: "https://g.page/r/CTEVs4ZDKVDIEBM/review",
       snippet: "Scrieți o recenzie sau împărtășiți părerea dumneavoastră pe profilul oficial Google Business al Cabinetului de Psihologie Iulia Spînu."
     },
+    /* Ghiduri Audio temporar decuplate:
     {
       title: "Ghiduri Audio Terapeutice",
       url: "audio.html",
@@ -161,6 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
       url: "audio.html#pachet-complet",
       snippet: "Include toate cele 3 înregistrări audio complete la preț redus (119 RON în loc de 147 RON)."
     },
+    */
     {
       title: "Confidențialitate CPR & GDPR",
       url: "confidentialitate.html",
@@ -287,21 +289,14 @@ document.addEventListener('DOMContentLoaded', () => {
           isOpen = true;
         } else if (timeInDec < 15) {
           nextMsg = "Deschide astăzi la 15:00";
+        } else if (day === 5) {
+          nextMsg = "Închis acum • Deschide Luni la 15:00";
         } else {
-          nextMsg = "Închis acum • Deschide mâine";
-        }
-      } else if (day === 6) {
-        // Sambata: 11:00 - 16:00
-        if (timeInDec >= 11 && timeInDec < 16) {
-          isOpen = true;
-        } else if (timeInDec < 11) {
-          nextMsg = "Deschide astăzi la 11:00";
-        } else {
-          nextMsg = "Închis acum • Deschide Luni";
+          nextMsg = "Închis acum • Deschide mâine la 15:00";
         }
       } else {
-        // Duminica: Închis
-        nextMsg = "Închis Duminică • Deschide Luni la 15:00";
+        // Sâmbătă și Duminică: Închis
+        nextMsg = "Închis în weekend • Deschide Luni la 15:00";
       }
 
       if (isOpen) {
