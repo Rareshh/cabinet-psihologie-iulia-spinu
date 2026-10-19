@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
   if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
 
-  const drawerLinks = document.querySelectorAll('.mobile-nav-drawer .nav-link');
+  const drawerLinks = document.querySelectorAll('.mobile-nav-drawer a');
   drawerLinks.forEach(link => {
     link.addEventListener('click', closeDrawer);
   });

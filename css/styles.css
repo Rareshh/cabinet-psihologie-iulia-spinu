@@ -1672,32 +1672,39 @@ textarea.form-control {
   visibility: visible;
 }
 
-.mobile-nav-drawer .nav-links {
+.mobile-nav-drawer .nav-links,
+.mobile-drawer-links {
   display: flex !important;
-  flex-direction: column;
-  gap: 18px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  flex-direction: column !important;
+  gap: 16px !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-.mobile-nav-drawer .nav-link {
+.mobile-nav-drawer .nav-link,
+.mobile-drawer-link {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 500;
-  color: #222222;
+  color: #222222 !important;
   min-height: 48px;
-  display: inline-flex;
+  display: flex !important;
   align-items: center;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 8px 0;
   transition: color 0.2s ease;
 }
 
-.mobile-nav-drawer .nav-link:hover {
-  color: var(--color-sage-deep);
+.mobile-nav-drawer .nav-link:hover,
+.mobile-drawer-link:hover {
+  color: var(--color-sage-deep) !important;
 }
 
-.mobile-nav-drawer .nav-link.active {
-  color: var(--color-sage-deep);
+.mobile-nav-drawer .nav-link.active,
+.mobile-drawer-link.active {
+  color: var(--color-sage-deep) !important;
   font-weight: 600;
 }
 
