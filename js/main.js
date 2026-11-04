@@ -97,24 +97,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const siteIndex = [
     {
-      title: "Consiliere Copii",
+      title: "Consiliere / Psihoterapie Copii",
       url: "servicii.html#copii",
       snippet: "Un spațiu sigur și prietenos unde cei mici pot explora și depăși dificultățile emoționale prin joc și tehnici adaptate vârstei. Durată: 50 minute. Preț: 190 RON."
     },
     {
-      title: "Consiliere Adolescenți",
+      title: "Consiliere / Psihoterapie Adolescenți",
       url: "servicii.html#adolescenti",
       snippet: "Sprijin empatic pentru tineri în perioade de tranziție, anxietate școlară, probleme de identitate sau dificultăți relaționale. Durată: 50 minute. Preț: 190 RON."
     },
     {
-      title: "Consiliere Adulți",
+      title: "Consiliere / Psihoterapie Adulți",
       url: "servicii.html#adulti",
       snippet: "Spațiu de lucru pentru gestionarea stresului, a anxietății, a dificultăților de cuplu sau a crizelor personale, oferind claritate și echilibru. Durată: 50 minute. Preț: 190 RON."
     },
     {
       title: "Tarife și Servicii",
       url: "servicii.html",
-      snippet: "Consultați lista completă a serviciilor de consiliere psihologică, durata ședințelor și tarifele aferente."
+      snippet: "Consultați lista completă a serviciilor de psihoterapie și consiliere, durata ședințelor și tarifele aferente."
     },
     {
       title: "Despre Terapeut (Iulia Spînu)",
